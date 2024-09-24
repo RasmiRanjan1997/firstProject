@@ -1,1 +1,75 @@
-<p>new-hospital works!</p>
+<div>
+    <h2 class="text-2xl uppercase font-bold text-center">Hospital Registration</h2>
+    <form action="" class="space-y-4">
+        <!-- Row 1: Hospital Name and Password -->
+        <div class="grid grid-cols-2 gap-4 mt-10">
+            <!-- Hospital Name -->
+            <div class="flex flex-col gap-1">
+                <input id="hospitalName" type="text" class="border border-gray-300 px-3 py-2 rounded-md w-full">
+                <label for="hospitalName" class="font-semibold">Hospital Name</label>
+            </div>
+            <!-- Password -->
+            <div class="flex flex-col gap-1">
+                <input id="password" type="password" class="border border-gray-300 px-3 py-2 rounded-md w-full">
+                <label for="password" class="font-semibold">Password</label>
+            </div>
+        </div>
+
+        <!-- Row 2: Contact No and Owner Name -->
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Contact No -->
+            <div class="flex flex-col gap-1">
+                <input id="contactNo" type="text" class="border border-gray-300 px-3 py-2 rounded-md w-full">
+                <label for="contactNo" class="font-semibold">Contact No</label>
+            </div>
+            <!-- Owner Name -->
+            <div class="flex flex-col gap-1">
+                <input id="ownerName" type="text" class="border border-gray-300 px-3 py-2 rounded-md w-full">
+                <label for="ownerName" class="font-semibold">Owner Name</label>
+            </div>
+        </div>
+
+        <!-- Row 3: Owner Contact No and Owner Email ID -->
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Owner Contact No -->
+            <div class="flex flex-col gap-1">
+                <input id="ownerContact" type="text" class="border border-gray-300 px-3 py-2 rounded-md w-full">
+                <label for="ownerContact" class="font-semibold">Owner Contact No</label>
+            </div>
+            <!-- Owner Email ID -->
+            <div class="flex flex-col gap-1">
+                <input id="ownerEmail" type="email" class="border border-gray-300 px-3 py-2 rounded-md w-full">
+                <label for="ownerEmail" class="font-semibold">Owner Email ID</label>
+            </div>
+        </div>
+
+        <!-- Row 4: City and Address -->
+        <div class="grid grid-cols-2 gap-4">
+            <!-- City -->
+            <div class="flex flex-col gap-1">
+                <input id="city" type="text" class="border border-gray-300 px-3 py-2 rounded-md w-full">
+                <label for="city" class="font-semibold">City</label>
+            </div>
+            <!-- Address -->
+            <div class="flex flex-col gap-1">
+                <input id="address" type="text" class="border border-gray-300 px-3 py-2 rounded-md w-full">
+                <label for="address" class="font-semibold">Address</label>
+            </div>
+        </div>
+
+        <!-- Row 5: Username -->
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Username -->
+            <div class="flex flex-col gap-1">
+                <input id="username" type="text" class="border border-gray-300 px-3 py-2 rounded-md w-full">
+                <label for="username" class="font-semibold">User Name</label>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex justify-center gap-5 !mt-10">
+            <button type="reset" class="bg-gray-400 hover:bg-gray-500 text-white py-2 px-4 rounded-md">Reset all</button>
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md">Register</button>
+        </div>
+    </form>
+</div>

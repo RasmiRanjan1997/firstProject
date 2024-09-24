@@ -9,6 +9,7 @@ import { AppointmentListComponent } from './pages/appointment-list/appointment-l
 import { HospitalListComponent } from './pages/hospital-list/hospital-list.component';
 import { NewHospitalComponent } from './pages/new-hospital/new-hospital.component';
 import { PatientListComponent } from './pages/patient-list/patient-list.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { PatientListComponent } from './pages/patient-list/patient-list.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
