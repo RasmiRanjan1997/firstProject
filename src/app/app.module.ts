@@ -10,6 +10,7 @@ import { HospitalListComponent } from './pages/hospital-list/hospital-list.compo
 import { NewHospitalComponent } from './pages/new-hospital/new-hospital.component';
 import { PatientListComponent } from './pages/patient-list/patient-list.component';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

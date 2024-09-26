@@ -1,1 +1,56 @@
+<header>
+    <nav class="bg-black text-white px-10">
+        <div class="flex justify-between items-center p-2">
+            <div class="flex flex-row gap-5">
+                <h2 class="text-base font-semibold">Logo</h2>
+                <ul class="flex flex-row items-center gap-5">
+                    <li *ngIf="loggedHospitalData.hospitalId != 0">
+                        <a [routerLink]="'/appointment'">Appointment</a>
+                    </li>
+                    <li *ngIf="loggedHospitalData.hospitalId != 0" >
+                        <a [routerLink]="'/patients'">Patients</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex flex-row gap-5">
+                <button class="bg-blue-500 px-4 py-1 rounded-md" *ngIf="loggedHospitalData.hospitalId != 0">{{loggedHospitalData.hospitalEmailId}}</button>
+                <button class="bg-red-500 px-4 py-1 rounded-md"  *ngIf="loggedHospitalData.hospitalId != 0" (click)="logOff()">Logout</button>
+                <button class="bg-blue-500 px-4 py-1 rounded-md" *ngIf="loggedHospitalData.hospitalId == 0" (click)="openModel()">Login</button>
+                
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+
 <router-outlet></router-outlet>
+
+
+<div *ngIf="openPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="w-96 bg-white rounded-md">
+        <form>
+            <div class="flex flex-row justify-between items-center p-5">
+                <h2 class="text-xl font-semibold">Login</h2>
+                <span class="text-gray-500 text-lg cursor-pointer" (click)="cancelClick()">X</span>
+            </div>
+            <div class="mt-0 mb-0">
+                <hr class="border-black">
+            </div>
+            <div class="flex flex-col gap-2 p-5">
+                <div class="flex flex-col gap-1">
+                    <label for="" class="text-gray-600">User Name</label>
+                    <input [ngModelOptions]="{standalone: true}" [(ngModel)]="loginObj.userName" type="text" placeholder="enter username" class="border py-1.5 px-4 rounded-md">
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="" class="text-gray-600">Password</label>
+                    <input [ngModelOptions]="{standalone: true}" [(ngModel)]="loginObj.password" type="text" placeholder="enter password" class="border py-1.5 px-4 rounded-md">
+                </div>
+                <div class="mt-7 text-right">
+                    <button class="bg-red-600 text-white px-4 py-1 rounded-md" (click)="cancelClick()">Cancel</button>
+                    <button class="bg-green-600 ml-5 text-white px-4 py-1 rounded-md" (click)="loginForm()">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
